@@ -159,6 +159,8 @@ void ImGui_ImplGLUT_KeyboardUpFunc(unsigned char c, int x, int y)
     (void)x; (void)y; // Unused
 }
 
+void special(int key, int x, int y);
+
 void ImGui_ImplGLUT_SpecialFunc(int key, int x, int y)
 {
     //printf("key_down_func %d\n", key);
@@ -167,6 +169,7 @@ void ImGui_ImplGLUT_SpecialFunc(int key, int x, int y)
         io.KeysDown[key + 256] = true;
     ImGui_ImplGLUT_UpdateKeyboardMods();
     (void)x; (void)y; // Unused
+    special(key, x, y);
 }
 
 void ImGui_ImplGLUT_SpecialUpFunc(int key, int x, int y)
