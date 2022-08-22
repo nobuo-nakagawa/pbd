@@ -3,6 +3,7 @@
 #if defined(WIN32)
 #pragma warning(disable:4996)
 #include <GL/glut.h>
+#include <GL/freeglut.h>
 #ifdef NDEBUG
 #pragma comment(linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
 #endif // NDEBUG
@@ -11,6 +12,7 @@
 #include <GLUT/glut.h>
 #else // MACOSX
 #include <GL/glut.h>
+#include <GL/freeglut.h>
 #endif // unix
 
 #include "glm/glm.hpp"
