@@ -48,7 +48,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Darwin")
   set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64")
 endif()
 
-set(OpenGL_GL_PREFERENCE LEGACY)
+set(OpenGL_GL_PREFERENCE "LEGACY")
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 
