@@ -48,7 +48,6 @@ if(CMAKE_SYSTEM_NAME MATCHES "Darwin")
   set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64")
 endif()
 
-cmake_policy (SET CMP0072 OLD)
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 
