@@ -43,6 +43,11 @@ add_custom_command(
 )
 endif(MSVC)
 
+if(CMAKE_SYSTEM_NAME MATCHES "Darwin")
+  add_definitions(-std=gnu++17)
+  set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64")
+endif()
+
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 
