@@ -379,8 +379,8 @@ public:
         //Vec2 uv((Float)(w) / (size.x - 1), (Float)(h) / (size.y - 1));
         GLfloat inv_mass = 1.0f;
         Vec3 vel((Float)0.0, (Float)0.0, (Float)0.0);
-        if ((h == 0) && (w == 0)          ||
-            (h == 0) && (w == size.x - 1)) {
+        if (((h == 0) && (w == 0))           ||
+            ((h == 0) && (w == size.x - 1))) {
           inv_mass = 0.0f; // fix only edge point
         }
         pos += in_pos;
