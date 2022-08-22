@@ -26,6 +26,7 @@ jobs:
         cmake ../ -DCMAKE_BUILD_TYPE=Release
         cmake --build .
 
-#    - name: make
-#      run: make
-#      working-directory: ./project/unix
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: bin/

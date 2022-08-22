@@ -20,3 +20,8 @@ jobs:
         cmake ../ -G Xcode
         cmake --build . --target ALL_BUILD --config Release
         cmake --build . --target ALL_BUILD --config Debug
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: bin/
