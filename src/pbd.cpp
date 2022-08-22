@@ -470,7 +470,7 @@ void write_ppm(GLubyte* buff, GLenum format) {
     fprintf(fp, "255\n");
     for(int y = 0; y < h; y++) {
       for(int x = 0; x < w; x++) {
-        int index = (h - y) * w * pix_sz + (x * pix_sz);
+        int index = (h - y - 1) * w * pix_sz + (x * pix_sz);
         if (format == GL_RGBA) {
           int r = buff[index];
           int g = buff[index + 1];
@@ -680,11 +680,11 @@ void initialize(int argc, char* argv[]) {
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
   glEnable(GL_POINT_SMOOTH);
   glEnable(GL_LINE_SMOOTH);
-  glEnable(GL_POLYGON_SMOOTH);
+//  glEnable(GL_POLYGON_SMOOTH);
   glHint(GL_POINT_SMOOTH_HINT, GL_NICEST);
   glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
-  glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
-  //glEnable(GL_AUTO_NORMAL);
+//  glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
+  glEnable(GL_AUTO_NORMAL);
   glEnable(GL_NORMALIZE);
 
   init_imgui();
